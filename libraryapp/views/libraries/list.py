@@ -3,8 +3,9 @@ from django.shortcuts import render
 from libraryapp.models import Library
 from libraryapp.models import model_factory
 from ..connection import Connection
+from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def list_libraries(request):
     with sqlite3.connect(Connection.db_path) as conn:
         conn.row_factory = model_factory(Library)
@@ -15,7 +16,7 @@ def list_libraries(request):
             id,
             title,
             address
-        from libraryapp_library 
+        from libraryapp_library
         """)
 
         all_libraries = db_cursor.fetchall()
