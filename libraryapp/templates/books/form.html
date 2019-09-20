@@ -1,13 +1,7 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html>
+{% extends 'shared/base.html' %}
 
-<head>
-    <meta charset="utf-8">
-    <title>Library</title>
-</head>
+{% block content %}
 
-<body>
     <h1>Inventory Book</h1>
 
     {% if book.id is not None %}
@@ -50,6 +44,6 @@
         {% endif %}
 
     </form>
-</body>
 
-</html>
+{% endblock %}
+
