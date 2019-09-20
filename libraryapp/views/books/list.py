@@ -19,7 +19,7 @@ def book_list(request):
             select
                 b.id,
                 b.title,
-                b.isbn,
+                b.ISBN,
                 b.author,
                 b.year_published,
                 b.librarian_id,
