@@ -16,10 +16,10 @@ def list_libraries(request):
 
             db_cursor.execute("""
             select
-                id,
-                title,
-                address
-            from libraryapp_library
+                l.id,
+                l.title,
+                l.address
+            from libraryapp_library l
             """)
 
             all_libraries = db_cursor.fetchall()
