@@ -1,13 +1,10 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Librarian</title>
-  </head>
-  <body>
+{% extends 'shared/base.html' %}
+
+{% block content %}
+
     <h1>{{ librarian.first_name }} {{librarian.last_name}}</h1>
     <h2>Date Joined: {{ librarian.date_joined }}</h2>
     <h2>Works at {{ librarian.title }}</h2>
-  </body>
-</html>
+
+{% endblock %}
+
